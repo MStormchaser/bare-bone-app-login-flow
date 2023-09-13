@@ -12,3 +12,6 @@ React Native bare app including several login methods. Including setting up the 
 - React native
 - Expo
 - Firebase
+
+- Tailwind CSS
+- RN Navigator
