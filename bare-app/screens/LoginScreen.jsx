@@ -1,11 +1,26 @@
-import { View, Text } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import styles from "../styles/globalStyle";
 
 const LoginScreen = () => {
   return (
-    <View>
-      <Text>LoginScreen</Text>
-    </View>
+    <SafeAreaView>
+      {/* Header */}
+      <View style={styles.marginX}>
+        <View style={styles.header}>
+          <View>
+            <Image
+              source={require("../assets/logos/max-power-icon.png")}
+              style={styles.logoMedium}
+            />
+          </View>
+          <TouchableOpacity>
+            <Text>Sign In</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </SafeAreaView>
   );
 };
 
