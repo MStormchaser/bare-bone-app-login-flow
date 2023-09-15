@@ -2,28 +2,38 @@ import { StyleSheet } from "react-native";
 
 import { COLORS, FONT, SIZES } from "../constants";
 
-const style = StyleSheet.create({
-  container: {
-    backgroundColor: COLORS.surfaceBase,
-  },
-  marginX: {
-    marginHorizontal: SIZES.xLarge,
-  },
-  header: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  logoMedium: {
+const globalStyle = StyleSheet.create({
+  buttonPrimary: {
+    //width: "100%",
+    flex: 1,
     height: SIZES.x5Large,
-    width: SIZES.x5Large,
+    maxHeight: SIZES.x5Large,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: SIZES.xxSmall,
+
+    backgroundColor: COLORS.black,
   },
-  buttonSecondaryRound: {
-    paddingHorizontal: SIZES.medium,
-    paddingVertical: SIZES.small,
-    backgroundColor: COLORS.surfacePrimary,
-    borderRadius: "50%",
+  buttonSecondary: {
+    //width: "100%",
+    flex: 1,
+    height: SIZES.x5Large,
+    maxHeight: SIZES.x5Large,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: SIZES.xxSmall,
+    borderWidth: 1,
+    borderColor: COLORS.black,
+    backgroundColor: COLORS.white,
+  },
+  buttonTextPrimary: {
+    color: COLORS.white,
+    fontSize: SIZES.medium,
+  },
+  buttonTextLightSmall: {
+    color: COLORS.surfaceSecondary,
+    fontSize: SIZES.small,
   },
 });
 
-export default style;
+export default globalStyle;

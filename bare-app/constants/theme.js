@@ -5,13 +5,13 @@ const COLORS = {
 
   surfaceBase: "#fff",
   surfacePrimary: "#F2F2F2",
-  surfaceSecondary: "#B3B3B3",
+  surfaceSecondary: "#818B8D",
 
   gray: "#83829A",
   gray2: "#C1C0C8",
 
   white: "#fff",
-  lightWhite: "#FAFAFC",
+  black: "#252525",
 };
 
 const FONT = {
@@ -21,6 +21,8 @@ const FONT = {
 };
 
 const SIZES = {
+  xxxSmall: 4,
+  xxSmall: 8,
   xSmall: 10,
   small: 12,
   medium: 16,
