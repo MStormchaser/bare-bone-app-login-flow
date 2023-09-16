@@ -2,10 +2,6 @@ import { COLORS, SIZES } from "../../constants";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  containerPrimary: {
-    flex: 1,
-    backgroundColor: COLORS.surfaceBase,
-  },
   containerHeader: {
     flexDirection: "row",
     marginHorizontal: SIZES.large,
@@ -26,17 +22,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     marginHorizontal: SIZES.medium,
-  },
-  bodyInput: {
-    width: "100%",
-    height: SIZES.x5Large,
-    borderColor: COLORS.surfacePrimary,
-    borderRadius: SIZES.xxSmall,
-    borderWidth: 2,
-    backgroundColor: COLORS.surfaceBase,
-    paddingLeft: SIZES.xxSmall,
-    marginBottom: SIZES.medium,
-    color: COLORS.surfaceSecondary,
   },
   bodyPwForgetLink: {
     justifyContent: "center",

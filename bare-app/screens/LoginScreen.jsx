@@ -2,11 +2,12 @@ import { View, Text, Image, TouchableOpacity, TextInput } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import globalStyles from "../styles/globalStyle";
+
 import styles from "../styles/login/loginScreen.style";
 
 import { logos, icons } from "../constants";
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,11 +20,14 @@ const LoginScreen = () => {
   };
 
   return (
-    <SafeAreaView style={styles.containerPrimary}>
+    <SafeAreaView style={globalStyles.screenWrapper}>
       {/* Header */}
       <View style={styles.containerHeader}>
         <Image source={logos.logoIcon} style={styles.headerImg} />
-        <TouchableOpacity style={styles.headerBtn}>
+        <TouchableOpacity
+          style={styles.headerBtn}
+          onPress={() => navigation.push("SignUp")}
+        >
           <Text>Sign In</Text>
         </TouchableOpacity>
       </View>
@@ -33,14 +37,14 @@ const LoginScreen = () => {
           placeholder="Email"
           value={email}
           onChangeText={setEmail}
-          style={styles.bodyInput}
+          style={globalStyles.TextInput}
         />
         <TextInput
           placeholder="Password"
           value={password}
           onChangeText={setPassword}
           secureTextEntry={true}
-          style={styles.bodyInput}
+          style={globalStyles.TextInput}
         />
         <View style={styles.spacerLarge}></View>
         <TouchableOpacity
