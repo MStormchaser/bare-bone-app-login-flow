@@ -48,7 +48,7 @@ const LoginScreen = ({ navigation }) => {
         />
         <View style={styles.spacerLarge}></View>
         <TouchableOpacity
-          onPress={handleSubmit}
+          onPress={() => navigation.navigate("Home")}
           style={globalStyles.buttonPrimary}
         >
           <Text style={globalStyles.buttonTextPrimary}>Login</Text>
