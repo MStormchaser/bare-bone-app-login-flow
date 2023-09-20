@@ -5,7 +5,7 @@ import globalStyles from "../styles/globalStyle";
 
 import styles from "../styles/login/loginScreen.style";
 
-import { logos, icons } from "../constants";
+import { logos, icons, COLORS } from "../constants";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -28,7 +28,7 @@ const LoginScreen = ({ navigation }) => {
           style={styles.headerBtn}
           onPress={() => navigation.push("SignUp")}
         >
-          <Text>Sign In</Text>
+          <Text>Sign Up</Text>
         </TouchableOpacity>
       </View>
       {/* Body */}
@@ -38,6 +38,8 @@ const LoginScreen = ({ navigation }) => {
           value={email}
           onChangeText={setEmail}
           style={globalStyles.TextInput}
+          keyboardType="email-address"
+          selectionColor={COLORS.flamingo}
         />
         <TextInput
           placeholder="Password"
@@ -45,6 +47,7 @@ const LoginScreen = ({ navigation }) => {
           onChangeText={setPassword}
           secureTextEntry={true}
           style={globalStyles.TextInput}
+          selectionColor={COLORS.flamingo}
         />
         <View style={styles.spacerLarge}></View>
         <TouchableOpacity
@@ -58,7 +61,12 @@ const LoginScreen = ({ navigation }) => {
             I forgot my password
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonMagicLinkWrapper}>
+
+        {/* Passwordless Sign-In */}
+        <TouchableOpacity
+          style={styles.buttonMagicLinkWrapper}
+          onPress={() => navigation.push("PasswordlessSignIn")}
+        >
           <View style={styles.buttonMagicLinkContainer}>
             <Text style={styles.buttonMagicLinkTextLeft}>Get Magic Link</Text>
             <Image

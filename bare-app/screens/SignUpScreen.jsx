@@ -10,8 +10,8 @@ import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import globalStyles from "../styles/globalStyle";
 
-import { COLORS, SIZES, icons } from "../constants";
-import { StyleSheet } from "react-native";
+import styles from "../styles/signUp/signUpScreen.style";
+import { logos, icons, COLORS } from "../constants";
 import Checkbox from "../utils/Checkbox";
 
 const SignUpScreen = ({ navigation }) => {
@@ -54,12 +54,15 @@ const SignUpScreen = ({ navigation }) => {
           placeholder="Name"
           value={name}
           onChangeText={setName}
+          selectionColor={COLORS.flamingo}
         />
         <TextInput
           style={globalStyles.TextInput}
           placeholder="Email"
           value={email}
           onChangeText={setEmail}
+          keyboardType="email-address"
+          selectionColor={COLORS.flamingo}
         />
         <TextInput
           style={globalStyles.TextInput}
@@ -67,6 +70,7 @@ const SignUpScreen = ({ navigation }) => {
           value={password}
           onChangeText={setPassword}
           secureTextEntry={true}
+          selectionColor={COLORS.flamingo}
         />
         <View style={styles.termsWrapper}>
           <Checkbox
@@ -94,7 +98,7 @@ const SignUpScreen = ({ navigation }) => {
               : globalStyles.buttonDisabled
           }
           disabled={!isCheckedTerms}
-          onPress={register}
+          onPress={() => navigation.navigate("SignUpConfirmation")}
         >
           <Text
             style={
@@ -112,44 +116,3 @@ const SignUpScreen = ({ navigation }) => {
 };
 
 export default SignUpScreen;
-
-const styles = StyleSheet.create({
-  headerWrapper: {
-    // flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginHorizontal: SIZES.large,
-    marginTop: SIZES.large,
-  },
-  headerIconWrapper: {
-    flex: 1,
-    padding: SIZES.small,
-  },
-  headerIcon: {
-    height: SIZES.xxLarge,
-    width: SIZES.xxLarge,
-  },
-  headerText: {
-    flex: 3,
-    fontSize: SIZES.xLarge,
-    fontWeight: "bold",
-    textAlign: "center",
-    justifyContent: "center",
-    marginLeft: SIZES.xLarge * -1,
-  },
-  spacerHeader: {
-    flex: 1,
-  },
-  termsWrapper: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingVertical: SIZES.xSmall,
-  },
-  termsTextPadding: {
-    paddingLeft: SIZES.small,
-  },
-  spacerVertical: {
-    paddingVertical: SIZES.medium,
-  },
-});

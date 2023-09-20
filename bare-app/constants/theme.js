@@ -5,13 +5,11 @@ const COLORS = {
 
   surfaceBase: "#fff",
   surfacePrimary: "#F2F2F2",
-  surfaceSecondary: "#818B8D",
-
-  gray: "#83829A",
-  gray2: "#C1C0C8",
+  surfaceSecondary: "#B3B3B3",
 
   white: "#fff",
   black: "#252525",
+  flamingo: "#FF66B2",
 };
 
 const FONT = {
