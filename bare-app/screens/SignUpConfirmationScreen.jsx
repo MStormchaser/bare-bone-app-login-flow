@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
+  StatusBar,
 } from "react-native";
 import React from "react";
 import { icons } from "../constants";
@@ -14,6 +15,7 @@ import styles from "../styles/signUp/signUpConfirmationScreen.style";
 const SignUpConfirmationScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={globalStyle.screenWrapper}>
+      <StatusBar barStyle={"dark-content"} />
       {/* Header */}
       <View style={styles.headerWrapper}>
         <TouchableOpacity
@@ -38,8 +40,13 @@ const SignUpConfirmationScreen = ({ navigation }) => {
         </View>
         <View>
           <TextInput
-            style={[globalStyle.TextInputSecondary, styles.textInputSpacing]}
+            style={[
+              globalStyle.TextInputSecondary,
+              globalStyle.textInputLarge,
+              styles.textInputSpacing,
+            ]}
             keyboardType="number-pad"
+            maxLength={6}
           />
           <TouchableOpacity style={globalStyle.buttonPrimary}>
             <Text style={globalStyle.buttonTextPrimary}>Confirm</Text>

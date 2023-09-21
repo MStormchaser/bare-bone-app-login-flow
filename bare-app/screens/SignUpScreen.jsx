@@ -48,7 +48,10 @@ const SignUpScreen = ({ navigation }) => {
         <View style={styles.spacerHeader}></View>
       </View>
       {/* Body */}
-      <KeyboardAvoidingView style={globalStyles.containerBdy}>
+      <KeyboardAvoidingView
+        style={globalStyles.containerBdy}
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+      >
         <TextInput
           style={globalStyles.TextInput}
           placeholder="Name"

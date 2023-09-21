@@ -6,6 +6,8 @@ import LoginScreen from "./screens/LoginScreen";
 import SignUpScreen from "./screens/SignUpScreen";
 import SignUpConfirmationScreen from "./screens/SignUpConfirmationScreen";
 import PasswordlessSignInScreen from "./screens/PasswordlessSignInScreen";
+import PasswordRecoveryScreen from "./screens/PasswordRecoveryScreen";
+import PasswordlessConfirmationScreen from "./screens/PasswordlessConfirmationScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,12 +21,20 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
         <Stack.Screen
+          name="PasswordRecovery"
+          component={PasswordRecoveryScreen}
+        />
+        <Stack.Screen
           name="SignUpConfirmation"
           component={SignUpConfirmationScreen}
         />
         <Stack.Screen
           name="PasswordlessSignIn"
           component={PasswordlessSignInScreen}
+        />
+        <Stack.Screen
+          name="PasswordlessConfirmation"
+          component={PasswordlessConfirmationScreen}
         />
         <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Navigator>

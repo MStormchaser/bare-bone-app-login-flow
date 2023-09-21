@@ -1,4 +1,11 @@
-import { View, Text, Image, TouchableOpacity, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  TextInput,
+  StatusBar,
+} from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import globalStyles from "../styles/globalStyle";
@@ -21,6 +28,7 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={globalStyles.screenWrapper}>
+      <StatusBar barStyle={"dark-content"} />
       {/* Header */}
       <View style={styles.containerHeader}>
         <Image source={logos.logoIcon} style={styles.headerImg} />
@@ -56,7 +64,10 @@ const LoginScreen = ({ navigation }) => {
         >
           <Text style={globalStyles.buttonTextPrimary}>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.bodyPwForgetLink}>
+        <TouchableOpacity
+          style={styles.bodyPwForgetLink}
+          onPress={() => navigation.push("PasswordRecovery")}
+        >
           <Text style={globalStyles.buttonTextLightSmall}>
             I forgot my password
           </Text>
@@ -80,14 +91,24 @@ const LoginScreen = ({ navigation }) => {
         </TouchableOpacity>
         <Text style={styles.spacerVerticalSmall}>or continue with</Text>
         <View style={styles.buttonSocialWrapper}>
-          <TouchableOpacity style={globalStyles.buttonSecondary}>
+          <TouchableOpacity
+            style={[
+              globalStyles.buttonSecondary,
+              globalStyles.buttonSecondaryFlex,
+            ]}
+          >
             <View style={styles.buttonSocialContainer}>
               <Image source={icons.google} style={styles.buttonSocialIcon} />
               <Text style={styles.buttonSocialText}>Google</Text>
             </View>
           </TouchableOpacity>
           <View style={styles.spacerHorizontalSmall}></View>
-          <TouchableOpacity style={globalStyles.buttonSecondary}>
+          <TouchableOpacity
+            style={[
+              globalStyles.buttonSecondary,
+              globalStyles.buttonSecondaryFlex,
+            ]}
+          >
             <View style={styles.buttonSocialContainer}>
               <Image source={icons.apple} style={styles.buttonSocialIcon} />
               <Text style={styles.buttonSocialText}>Apple</Text>

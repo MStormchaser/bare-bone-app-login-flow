@@ -7,12 +7,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginHorizontal: SIZES.large,
+    marginHorizontal: SIZES.medium,
     marginTop: SIZES.large,
   },
   headerIconWrapper: {
     flex: 1,
     padding: SIZES.small,
+    paddingLeft: 0,
   },
   headerIcon: {
     height: SIZES.xxLarge,
@@ -25,14 +26,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     justifyContent: "center",
-    marginLeft: SIZES.xLarge * -1,
+    //marginLeft: SIZES.xLarge * -1,
+    marginLeft: SIZES.large * -1,
   },
   spacerHeader: {
     flex: 1,
   },
   bodyWrapper: {
     flex: 0.5,
-    marginHorizontal: SIZES.xxLarge,
+    marginHorizontal: SIZES.medium,
     justifyContent: "space-between",
   },
   confirmationText: {
@@ -54,7 +56,11 @@ const styles = StyleSheet.create({
   },
   textInputSpacing: {
     // marginTop: SIZES.x5Large,
-    marginBottom: SIZES.large,
+    marginBottom: SIZES.x6Large,
+  },
+  buttonSpacing: {
+    // marginTop: SIZES.x5Large,
+    marginBottom: SIZES.medium,
   },
   footerWrapper: {
     marginHorizontal: SIZES.xLarge,

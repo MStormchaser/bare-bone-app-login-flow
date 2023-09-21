@@ -7,12 +7,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginHorizontal: SIZES.large,
+    marginHorizontal: SIZES.medium,
     marginTop: SIZES.large,
   },
   headerIconWrapper: {
     flex: 1,
     padding: SIZES.small,
+    paddingLeft: 0,
+    //backgroundColor: COLORS.black,
   },
   headerIcon: {
     height: SIZES.xxLarge,
@@ -24,7 +26,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     justifyContent: "center",
-    marginLeft: SIZES.xLarge * -1,
+    //marginLeft: SIZES.xLarge * -1,
+    marginLeft: SIZES.large * -1,
   },
   spacerHeader: {
     flex: 1,

@@ -7,10 +7,12 @@ const styles = StyleSheet.create({
     marginHorizontal: SIZES.large,
     alignItems: "center",
     justifyContent: "space-between",
+    marginTop: SIZES.large,
   },
   headerImg: {
     height: SIZES.x5Large,
     width: SIZES.x5Large,
+    resizeMode: "contain",
   },
   headerBtn: {
     paddingHorizontal: SIZES.medium,

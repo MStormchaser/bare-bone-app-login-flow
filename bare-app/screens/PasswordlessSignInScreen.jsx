@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
+  StatusBar,
 } from "react-native";
 import React from "react";
 import { icons } from "../constants";
@@ -14,6 +15,7 @@ import styles from "../styles/signUp/passwordlessSignUpScreen.style";
 const PasswordlessSignInScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={globalStyle.screenWrapper}>
+      <StatusBar barStyle={"dark-content"} />
       {/* Header */}
       <View style={styles.headerWrapper}>
         <TouchableOpacity
@@ -33,25 +35,25 @@ const PasswordlessSignInScreen = ({ navigation }) => {
             link for you to log-in as simple as a push of a button. Type your
             email below.
           </Text>
-          <TouchableOpacity style={styles.emailButton}>
-            <Text style={styles.emailButtonText}>Open email app</Text>
-          </TouchableOpacity>
         </View>
         <View>
           <TextInput
-            style={[globalStyle.TextInputSecondary, styles.textInputSpacing]}
-            keyboardType="number-pad"
+            style={[globalStyle.TextInput, styles.textInputSpacing]}
+            keyboardType="email-address"
           />
-          <TouchableOpacity style={globalStyle.buttonPrimary}>
+          <TouchableOpacity
+            style={globalStyle.buttonPrimary}
+            onPress={() => navigation.navigate("PasswordlessConfirmation")}
+          >
             <Text style={globalStyle.buttonTextPrimary}>Confirm</Text>
           </TouchableOpacity>
+          <View style={styles.buttonSpacing}></View>
+          <TouchableOpacity style={globalStyle.buttonSecondaryText}>
+            <View style={globalStyle.buttonSecondaryUnderline}>
+              <Text style={styles.emailButtonText}>Open email app</Text>
+            </View>
+          </TouchableOpacity>
         </View>
-      </View>
-      <View style={styles.footerWrapper}>
-        <Text style={styles.footerText}>
-          Haven't received the email? Send it again or use our feedback form to
-          get in touch with us.
-        </Text>
       </View>
     </SafeAreaView>
   );

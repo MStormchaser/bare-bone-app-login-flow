@@ -9,7 +9,6 @@ const globalStyle = StyleSheet.create({
   },
   buttonPrimary: {
     width: "100%",
-    // flex: 1,
     height: SIZES.x5Large,
     maxHeight: SIZES.x5Large,
     alignItems: "center",
@@ -18,8 +17,7 @@ const globalStyle = StyleSheet.create({
     backgroundColor: COLORS.black,
   },
   buttonSecondary: {
-    //width: "100%",
-    flex: 1,
+    width: "100%",
     height: SIZES.x5Large,
     maxHeight: SIZES.x5Large,
     alignItems: "center",
@@ -28,6 +26,21 @@ const globalStyle = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.black,
     backgroundColor: COLORS.white,
+  },
+  buttonSecondaryFlex: {
+    flex: 1,
+  },
+  buttonSecondaryText: {
+    width: "100%",
+    height: SIZES.x5Large,
+    maxHeight: SIZES.x5Large,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  buttonSecondaryUnderline: {
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.black,
+    paddingBottom: SIZES.xxxSmall,
   },
   buttonTextPrimary: {
     color: COLORS.white,
@@ -56,6 +69,7 @@ const globalStyle = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     marginHorizontal: SIZES.medium,
+    paddingBottom: SIZES.x5Large,
   },
   TextInput: {
     width: "100%",
@@ -77,6 +91,11 @@ const globalStyle = StyleSheet.create({
     paddingLeft: SIZES.xxSmall,
     marginBottom: SIZES.medium,
     color: COLORS.black,
+  },
+  textInputLarge: {
+    fontSize: SIZES.x3Large,
+    textAlign: "center",
+    letterSpacing: SIZES.small,
   },
 });
 
