@@ -2,8 +2,11 @@ import { StyleSheet } from "react-native";
 import { COLORS, SIZES } from "../../constants";
 
 const styles = StyleSheet.create({
+  screenWrapper: {
+    flex: 1,
+    backgroundColor: COLORS.surfaceBase,
+  },
   headerWrapper: {
-    // flex: 1,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -14,7 +17,6 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: SIZES.small,
     paddingLeft: 0,
-    //backgroundColor: COLORS.black,
   },
   headerIcon: {
     height: SIZES.xxLarge,
@@ -26,25 +28,27 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     justifyContent: "center",
-    //marginLeft: SIZES.xLarge * -1,
+
     marginLeft: SIZES.large * -1,
   },
   spacerHeader: {
     flex: 1,
   },
-  termsWrapper: {
-    maxWidth: "100%",
-    flexDirection: "row",
+  bodyWrapper: {
+    flex: 0.7,
+    justifyContent: "center",
     alignItems: "center",
-    paddingVertical: SIZES.xSmall,
+    marginHorizontal: SIZES.medium,
   },
-  termsTextPadding: {
-    paddingLeft: SIZES.small,
-    paddingRight: SIZES.xxLarge,
-    lineHeight: 20,
+  heading: {
+    fontSize: SIZES.xLarge,
+    fontWeight: "bold",
+    marginBottom: SIZES.large,
   },
-  spacerVertical: {
-    paddingVertical: SIZES.medium,
+  description: {
+    marginBottom: SIZES.x6Large,
+    fontSize: SIZES.medium,
+    marginHorizontal: SIZES.large,
   },
 });
 

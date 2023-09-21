@@ -26,7 +26,7 @@ const HomeScreen = ({ navigation }) => {
       <Image source={logos.logoIcon} style={styles.homeImg} />
       <Text style={styles.homeText}>Follow me on YouTube</Text>
       <TouchableOpacity onPress={openUrl} style={styles.homeButtonYT}>
-        <Text style={{ fontWeight: "bold" }}>🤙 Salty Flamingo 🤙</Text>
+        <Text style={{ fontWeight: "bold" }}>🤙 Decimal Flamingo 🤙</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.homeButtonSignOut}

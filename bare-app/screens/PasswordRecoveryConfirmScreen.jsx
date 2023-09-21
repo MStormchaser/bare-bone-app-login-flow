@@ -10,9 +10,9 @@ import {
 import React from "react";
 import { icons } from "../constants";
 import globalStyle from "../styles/globalStyle";
-import styles from "../styles/signUp/passwordlessSignUpScreen.style";
+import styles from "../styles/signUp/passwordRecoveryConfirmation.style";
 
-const PasswordlessSignInScreen = ({ navigation }) => {
+const PasswordRecoveryConfirmationScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={globalStyle.screenWrapper}>
       <StatusBar barStyle={"dark-content"} />
@@ -24,33 +24,44 @@ const PasswordlessSignInScreen = ({ navigation }) => {
         >
           <Image source={icons.arrowLeft} style={styles.headerIcon} />
         </TouchableOpacity>
-        <Text style={styles.headerText}>Get a magic link</Text>
+        <Text style={styles.headerText}>Confirm password reset</Text>
         <Text style={styles.spacerHeader}></Text>
       </View>
       {/* Body */}
       <View style={styles.bodyWrapper}>
         <View>
-          <Text style={globalStyle.paragraphBase}>
-            This is a passwordless login. We will send you an email with a magic
-            link for you to log-in as simple as a push of a button. Type your
-            email below.
+          <Text style={[globalStyle.paragraphBase, styles.confirmationText]}>
+            If an account exists for EMAIL we'll send instructions for resetting
+            your password. Didn't get them? Check the email address or ask to
+            resend the instructions.
           </Text>
+          <TouchableOpacity style={styles.emailButton}>
+            <Text style={styles.emailButtonText}>Open email app</Text>
+          </TouchableOpacity>
         </View>
         <View>
+          <View style={globalStyle.spacerVerticalLarge}></View>
           <TextInput
-            style={[globalStyle.TextInput, styles.textInputSpacing]}
-            keyboardType="email-address"
+            style={[
+              globalStyle.TextInputSecondary,
+              globalStyle.textInputLarge,
+              styles.textInputSpacing,
+            ]}
+            keyboardType="number-pad"
+            maxLength={6}
           />
           <TouchableOpacity
             style={globalStyle.buttonPrimary}
-            onPress={() => navigation.navigate("PasswordlessConfirmation")}
+            onPress={() => navigation.navigate("PasswordRecoveryReset")}
           >
             <Text style={globalStyle.buttonTextPrimary}>Confirm</Text>
           </TouchableOpacity>
-          <View style={styles.buttonSpacing}></View>
+          <View style={globalStyle.spacerVerticalBase}></View>
           <TouchableOpacity style={globalStyle.buttonSecondaryText}>
             <View style={globalStyle.buttonSecondaryUnderline}>
-              <Text style={globalStyle.paragraphBase}>Open email app</Text>
+              <Text style={globalStyle.paragraphBase}>
+                Resend the instructions again
+              </Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -59,4 +70,4 @@ const PasswordlessSignInScreen = ({ navigation }) => {
   );
 };
 
-export default PasswordlessSignInScreen;
+export default PasswordRecoveryConfirmationScreen;

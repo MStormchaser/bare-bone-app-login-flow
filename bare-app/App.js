@@ -8,6 +8,9 @@ import SignUpConfirmationScreen from "./screens/SignUpConfirmationScreen";
 import PasswordlessSignInScreen from "./screens/PasswordlessSignInScreen";
 import PasswordRecoveryScreen from "./screens/PasswordRecoveryScreen";
 import PasswordlessConfirmationScreen from "./screens/PasswordlessConfirmationScreen";
+import PasswordRecoveryConfirmScreen from "./screens/PasswordRecoveryConfirmScreen";
+import PasswordRecoveryResetScreen from "./screens/PasswordRecoveryResetScreen";
+import PasswordResetConfirmationScreen from "./screens/PasswordResetConfirmationScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +26,18 @@ export default function App() {
         <Stack.Screen
           name="PasswordRecovery"
           component={PasswordRecoveryScreen}
+        />
+        <Stack.Screen
+          name="PasswordRecoveryConfirmation"
+          component={PasswordRecoveryConfirmScreen}
+        />
+        <Stack.Screen
+          name="PasswordRecoveryReset"
+          component={PasswordRecoveryResetScreen}
+        />
+        <Stack.Screen
+          name="PasswordResetConfirmation"
+          component={PasswordResetConfirmationScreen}
         />
         <Stack.Screen
           name="SignUpConfirmation"

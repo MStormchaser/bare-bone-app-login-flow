@@ -97,6 +97,16 @@ const globalStyle = StyleSheet.create({
     textAlign: "center",
     letterSpacing: SIZES.small,
   },
+  paragraphBase: {
+    fontSize: SIZES.medium,
+    lineHeight: 24,
+  },
+  spacerVerticalBase: {
+    paddingVertical: SIZES.xxSmall,
+  },
+  spacerVerticalLarge: {
+    paddingVertical: SIZES.medium,
+  },
 });
 
 export default globalStyle;

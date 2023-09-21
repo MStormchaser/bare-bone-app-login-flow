@@ -48,7 +48,10 @@ const SignUpConfirmationScreen = ({ navigation }) => {
             keyboardType="number-pad"
             maxLength={6}
           />
-          <TouchableOpacity style={globalStyle.buttonPrimary}>
+          <TouchableOpacity
+            style={globalStyle.buttonPrimary}
+            onPress={() => navigation.navigate("Home")}
+          >
             <Text style={globalStyle.buttonTextPrimary}>Confirm</Text>
           </TouchableOpacity>
         </View>

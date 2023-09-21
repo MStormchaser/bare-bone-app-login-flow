@@ -14,11 +14,11 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: SIZES.small,
     paddingLeft: 0,
-    //backgroundColor: COLORS.black,
   },
   headerIcon: {
     height: SIZES.xxLarge,
     width: SIZES.xxLarge,
+    resizeMode: "contain",
   },
   headerText: {
     flex: 3,
@@ -32,19 +32,29 @@ const styles = StyleSheet.create({
   spacerHeader: {
     flex: 1,
   },
-  termsWrapper: {
-    maxWidth: "100%",
-    flexDirection: "row",
-    alignItems: "center",
-    paddingVertical: SIZES.xSmall,
+  bodyWrapper: {
+    flex: 0.5,
+    marginHorizontal: SIZES.medium,
+    justifyContent: "space-between",
   },
-  termsTextPadding: {
-    paddingLeft: SIZES.small,
-    paddingRight: SIZES.xxLarge,
-    lineHeight: 20,
+  confirmationText: {
+    marginTop: SIZES.medium,
   },
-  spacerVertical: {
-    paddingVertical: SIZES.medium,
+  emailButton: {
+    marginTop: SIZES.medium,
+    paddingHorizontal: SIZES.medium,
+    paddingVertical: SIZES.small,
+    backgroundColor: COLORS.white,
+    borderColor: COLORS.surfaceSecondary,
+    borderWidth: 1,
+    borderRadius: "50%",
+    alignSelf: "flex-start",
+  },
+  emailButtonText: {
+    fontSize: SIZES.medium,
+  },
+  textInputSpacing: {
+    marginBottom: SIZES.large,
   },
 });
 

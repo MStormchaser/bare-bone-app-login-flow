@@ -90,7 +90,7 @@ const SignUpScreen = ({ navigation }) => {
             onSelectedChange={setCheckedTerms}
           />
           <Text style={styles.termsTextPadding}>
-            I agree to receive news and product updates from WattWaffle.
+            I agree to receive news and product updates from this App.
           </Text>
         </View>
         <View style={styles.spacerVertical} />

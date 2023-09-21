@@ -35,9 +35,9 @@ const styles = StyleSheet.create({
   buttonMagicLinkWrapper: {
     width: "100%",
     height: SIZES.x5Large,
-    borderColor: COLORS.surfacePrimary,
+    borderColor: COLORS.surfaceSecondary,
     borderRadius: SIZES.xxSmall,
-    borderWidth: 2,
+    borderWidth: 1,
     justifyContent: "center",
   },
   buttonMagicLinkContainer: {
