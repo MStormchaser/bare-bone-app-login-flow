@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import React from "react";
 import { icons, logos } from "../constants";
+import { Firebase_Auth } from "../firebaseConfig";
 
 const HomeScreen = ({ navigation }) => {
   const openUrl = () => {
@@ -30,7 +31,7 @@ const HomeScreen = ({ navigation }) => {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.homeButtonSignOut}
-        onPress={() => navigation.navigate("Login")}
+        onPress={() => Firebase_Auth.signOut()}
       >
         <Text>Sign Out</Text>
       </TouchableOpacity>

@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   TextInput,
   KeyboardAvoidingView,
+  ActivityIndicator,
 } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -13,21 +14,34 @@ import globalStyles from "../styles/globalStyle";
 import styles from "../styles/signUp/signUpScreen.style";
 import { logos, icons, COLORS } from "../constants";
 import Checkbox from "../utils/Checkbox";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { Firebase_Auth } from "../firebaseConfig";
 
 const SignUpScreen = ({ navigation }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const auth = Firebase_Auth;
 
   const [isCheckedTerms, setCheckedTerms] = useState(false);
   const [isCheckedNewsletter, setCheckedNewsletter] = useState(false);
 
-  const register = () => {
-    console.log("register button pressed");
-    console.log(isCheckedTerms);
-    console.log(name);
-    console.log(email);
-    console.log(password);
+  const signUp = async () => {
+    setLoading(true);
+    try {
+      const response = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+      alert("Create Account failed" + error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -35,7 +49,7 @@ const SignUpScreen = ({ navigation }) => {
       {/* Header */}
       <View style={styles.headerWrapper}>
         <TouchableOpacity
-          onPress={() => navigation.goBack()}
+          onPress={() => navigation.navigate("Login")}
           style={styles.headerIconWrapper}
         >
           <Image
@@ -56,24 +70,26 @@ const SignUpScreen = ({ navigation }) => {
           style={globalStyles.TextInput}
           placeholder="Name"
           value={name}
-          onChangeText={setName}
+          onChangeText={(text) => setName(text)}
           selectionColor={COLORS.flamingo}
         />
         <TextInput
           style={globalStyles.TextInput}
           placeholder="Email"
           value={email}
-          onChangeText={setEmail}
+          onChangeText={(text) => setEmail(text)}
           keyboardType="email-address"
           selectionColor={COLORS.flamingo}
+          autoCapitalize="none"
         />
         <TextInput
           style={globalStyles.TextInput}
           placeholder="Password"
           value={password}
-          onChangeText={setPassword}
+          onChangeText={(text) => setPassword(text)}
           secureTextEntry={true}
           selectionColor={COLORS.flamingo}
+          autoCapitalize="none"
         />
         <View style={styles.termsWrapper}>
           <Checkbox
@@ -90,29 +106,34 @@ const SignUpScreen = ({ navigation }) => {
             onSelectedChange={setCheckedTerms}
           />
           <Text style={styles.termsTextPadding}>
-            I agree to receive news and product updates from this App.
+            I agree to receive news and product updates from this awesome App.
           </Text>
         </View>
         <View style={styles.spacerVertical} />
-        <TouchableOpacity
-          style={
-            isCheckedTerms
-              ? globalStyles.buttonPrimary
-              : globalStyles.buttonDisabled
-          }
-          disabled={!isCheckedTerms}
-          onPress={() => navigation.navigate("SignUpConfirmation")}
-        >
-          <Text
+        {/* Sign Up Button */}
+        {loading ? (
+          <ActivityIndicator size="large" color={COLORS.black} />
+        ) : (
+          <TouchableOpacity
             style={
               isCheckedTerms
-                ? globalStyles.buttonTextPrimary
-                : globalStyles.buttonTextDisabled
+                ? globalStyles.buttonPrimary
+                : globalStyles.buttonDisabled
             }
+            disabled={!isCheckedTerms}
+            onPress={signUp}
           >
-            Sign Up now
-          </Text>
-        </TouchableOpacity>
+            <Text
+              style={
+                isCheckedTerms
+                  ? globalStyles.buttonTextPrimary
+                  : globalStyles.buttonTextDisabled
+              }
+            >
+              Create Account
+            </Text>
+          </TouchableOpacity>
+        )}
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
