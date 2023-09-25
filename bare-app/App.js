@@ -8,7 +8,7 @@ import {
   signInWithCredential,
 } from "firebase/auth";
 import { Firebase_Auth } from "./firebaseConfig";
-import * as Google from "expo-auth-session/provider/google";
+
 import { maybeCompleteAuthSession } from "expo-web-browser";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -41,7 +41,6 @@ function InsideLayout() {
 /////////////////////////////
 export default function App() {
   const [user, setUser] = useState(null);
-  const [] = Google.useAuthRequest({});
 
   useEffect(() => {
     onAuthStateChanged(Firebase_Auth, (user) => {
