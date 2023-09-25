@@ -36,6 +36,8 @@ const LoginScreen = ({ navigation }) => {
     }
   };
 
+  const signInGoogle = () => {};
+
   return (
     <SafeAreaView style={globalStyles.screenWrapper}>
       <StatusBar barStyle={"dark-content"} />

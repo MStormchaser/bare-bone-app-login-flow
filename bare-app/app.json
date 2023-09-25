@@ -27,6 +27,13 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "83bc4ce9-f952-4228-9050-b2ef6c7571d8"
+      }
+    },
+    "owner": "stormchaser",
+    "scheme": "bare-app"
   }
 }
