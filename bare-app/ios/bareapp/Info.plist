@@ -27,7 +27,14 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
+          <string>bare-app</string>
           <string>com.stormchaser.bareapp</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.googleusercontent.apps.804727402963-0pb5ml9vmefal89c4l7dg21v1ohk6l76</string>
         </array>
       </dict>
     </array>

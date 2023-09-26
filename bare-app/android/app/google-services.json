@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "804727402963",
+    "project_id": "bare-app-login",
+    "storage_bucket": "bare-app-login.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804727402963:android:adfe4fcd240e363eb9bf26",
+        "android_client_info": {
+          "package_name": "com.stormchaser.bareapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804727402963-1ui2ge1l5p83a6tqe94tumm6qikehos0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZjBITVVWawCCTfWJxAm7hAbNFCJlh0q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804727402963-1ui2ge1l5p83a6tqe94tumm6qikehos0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
