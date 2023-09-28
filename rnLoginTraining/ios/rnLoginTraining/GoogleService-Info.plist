@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>804727402963-0pb5ml9vmefal89c4l7dg21v1ohk6l76.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.804727402963-0pb5ml9vmefal89c4l7dg21v1ohk6l76</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBcLc_tyJRM2MVKKmiw8rKJz0PHFRabuiE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>804727402963</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.stormchaser.bareapp</string>
+	<key>PROJECT_ID</key>
+	<string>bare-app-login</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bare-app-login.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:804727402963:ios:c6dd3f2eae7a0126b9bf26</string>
+</dict>
+</plist>
